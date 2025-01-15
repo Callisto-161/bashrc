@@ -1,0 +1,8 @@
+# append to /etc/bashrc
+
+if [ $(id -u) -eq 0 ];
+then
+    PS1="\[\e[0;92m\]\t\[\e[m\] | \[\e[0;91m\]\u@\H\[\e[m\] | \[\e[0;92m\]\w\[\e[m\]\n>"
+else
+    PS1="\[\e[0;95m\]\t\[\e[m\] | \[\e[0;36m\]\u@\H\[\e[m\] | \[\e[0;95m\]\w\[\e[m\]\n>"
+fi
